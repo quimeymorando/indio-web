@@ -20,6 +20,9 @@ const Hero: React.FC<HeroProps> = ({ onRequestAccess }) => {
           <img
             src="/logo-central.svg"
             alt="Wine Sunset Logo"
+            loading="eager"
+            fetchPriority="high"
+            decoding="sync"
             className="w-48 h-48 md:w-64 md:h-64 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
           />
         </div>
