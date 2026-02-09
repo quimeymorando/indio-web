@@ -71,7 +71,7 @@ const DetailsSection: React.FC<DetailsSectionProps> = ({ id }) => {
 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSfz4-3XALhGNXNoTmGPWq7/viewform?embedded=true"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfLBzLicVznPw_VbUCm5hWW8MCsyhDNQ8DGlN93Pe-pEicdEA/viewform?embedded=true"
           width="100%"
           height="800"
           frameBorder="0"
