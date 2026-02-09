@@ -20,6 +20,16 @@ const PricingCard: React.FC = () => {
           {PRICING_CONTENT.title}
         </h2>
 
+        {/* New Additional Text */}
+        <div className="flex flex-col items-center space-y-2 mb-8 text-center">
+          <p className="text-lg md:text-xl font-serif text-gray-200 tracking-wide drop-shadow-md">
+            Tres encuentros. La misma magia.
+          </p>
+          <p className="text-xs md:text-sm font-light text-gold-muted/80 tracking-wider">
+            Accede al pack completo y obtén Beneficios Exclusivos
+          </p>
+        </div>
+
         {/* Features List (Only show if there are features) */}
         {PRICING_CONTENT.features.length > 0 && (
           <ul className="space-y-6 w-full max-w-lg mb-12 flex flex-col items-center">

@@ -38,6 +38,8 @@ const Hero: React.FC<HeroProps> = ({ onRequestAccess }) => {
           </div>
         </div>
 
+
+
         {/* CTA Button */}
         <button
           onClick={onRequestAccess}
