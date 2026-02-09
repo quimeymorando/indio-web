@@ -55,7 +55,7 @@ const PricingCard: React.FC = () => {
 
         {/* Action Button */}
         <button
-          onClick={() => alert("Procesando acceso...")}
+          onClick={() => window.open("https://www.masentrada.app/events/indio-wine-sunset?referred_by=ce83a4c2-4fbe-4777-8031-338f9862ca17", "_blank")}
           className="relative overflow-hidden px-8 py-3 bg-gold-light text-black font-bold text-xs tracking-[0.2em] uppercase shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_35px_rgba(212,175,55,0.5)] transition-all duration-300 transform hover:-translate-y-1"
         >
           SOLICITAR ACCESO
