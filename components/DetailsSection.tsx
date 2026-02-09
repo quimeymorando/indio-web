@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PricingCard from './PricingCard';
 import LogoMarquee from './LogoMarquee';
+import Modal from './Modal';
 
 interface DetailsSectionProps {
   id: string;
 }
 
 const DetailsSection: React.FC<DetailsSectionProps> = ({ id }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section id={id} className="min-h-screen w-full bg-wine-dark relative flex flex-col pt-12 pb-24 space-y-32">
 
@@ -39,10 +41,10 @@ const DetailsSection: React.FC<DetailsSectionProps> = ({ id }) => {
               La verdadera experiencia se reserva para quienes están presentes."
             </p>
 
-            {/* Button - Heartbeat Animation */}
+            {/* Button - Opens Modal */}
             <button
               className="group/btn relative px-8 py-3 text-xs font-bold uppercase tracking-[0.25em] text-gold-light transition-all duration-500 hover:text-black animate-heartbeat"
-              onClick={() => window.open("https://forms.gle/3XALhGNXNoTmGPWq7", "_blank")}
+              onClick={() => setIsModalOpen(true)}
             >
               <span className="absolute inset-0 border border-gold-light transition-all duration-500 group-hover/btn:bg-gold-light group-hover/btn:border-gold-light"></span>
               <span className="relative">REGISTRARSE A LA EXPERIENCIA TOTAL</span>
@@ -66,6 +68,21 @@ const DetailsSection: React.FC<DetailsSectionProps> = ({ id }) => {
         </div>
         <LogoMarquee />
       </div>
+
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfz4-3XALhGNXNoTmGPWq7/viewform?embedded=true"
+          width="100%"
+          height="800"
+          frameBorder="0"
+          marginHeight={0}
+          marginWidth={0}
+          title="Formulario de Inscripción"
+          className="w-full min-h-[500px] md:min-h-[600px] bg-black"
+        >
+          Cargando...
+        </iframe>
+      </Modal>
 
     </section>
   );
