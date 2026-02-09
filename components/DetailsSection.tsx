@@ -42,7 +42,7 @@ const DetailsSection: React.FC<DetailsSectionProps> = ({ id }) => {
             {/* Button - Heartbeat Animation */}
             <button
               className="group/btn relative px-8 py-3 text-xs font-bold uppercase tracking-[0.25em] text-gold-light transition-all duration-500 hover:text-black animate-heartbeat"
-              onClick={() => alert("Redirigiendo al formulario de registro...")}
+              onClick={() => window.open("https://forms.gle/3XALhGNXNoTmGPWq7", "_blank")}
             >
               <span className="absolute inset-0 border border-gold-light transition-all duration-500 group-hover/btn:bg-gold-light group-hover/btn:border-gold-light"></span>
               <span className="relative">REGISTRARSE A LA EXPERIENCIA TOTAL</span>
