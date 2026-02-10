@@ -79,8 +79,8 @@ const EventDetails: React.FC<EventDetailsProps> = ({ id }) => {
                             {[
                                 { title: "Vínculos", desc: "Conversaciones sin prisa. El encuentro real sucede entre copas, fuera del ruido cotidiano." },
                                 { title: "Vinos de Altura", desc: "Una curaduría de etiquetas seleccionadas para acompañar el atardecer." },
-                                { title: "Cocina de Autor", desc: "Tapeo diseñado por SOA para maridar la experiencia." },
-                                { title: "Atmósfera Sonora", desc: "4 horas de música ambiental. El ritmo justo para la charla." },
+                                { title: "Cocina de Autor", desc: "Tapeo diseñado por SUA para maridar la experiencia." },
+                                { title: "Atmósfera Sonora", desc: "4 horas de un extended set en el que MELE, se ocupará de complementar la experiencia con su performance artística." },
                             ].map((item, idx) => (
                                 <li key={idx} className="group">
                                     <h4 className="text-white font-serif font-medium text-lg group-hover:text-gold-light transition-colors">{item.title}</h4>
