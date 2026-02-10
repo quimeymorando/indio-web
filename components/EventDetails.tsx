@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PricingCard from './PricingCard';
 import LogoMarquee from './LogoMarquee';
 import Modal from './Modal';
@@ -9,6 +9,31 @@ interface EventDetailsProps {
 
 const EventDetails: React.FC<EventDetailsProps> = ({ id }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+
+    useEffect(() => {
+        // Tally embed script
+        const d = document;
+        const w = "https://tally.so/widgets/embed.js";
+        const v = () => {
+            if (typeof (window as any).Tally !== "undefined") {
+                (window as any).Tally.loadEmbeds();
+            } else {
+                d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((e) => {
+                    (e as HTMLIFrameElement).src = (e as HTMLElement).dataset.tallySrc || "";
+                });
+            }
+        };
+
+        if (typeof (window as any).Tally !== "undefined") {
+            v();
+        } else if (d.querySelector(`script[src="${w}"]`) === null) {
+            const s = d.createElement("script");
+            s.src = w;
+            s.onload = v;
+            s.onerror = v;
+            d.body.appendChild(s);
+        }
+    }, []);
 
     return (
         <section id={id} className="relative w-full bg-wine-dark text-gray-200 overflow-hidden">
@@ -97,24 +122,24 @@ const EventDetails: React.FC<EventDetailsProps> = ({ id }) => {
                     <PricingCard />
                 </div>
 
-                {/* 4. Newsletter Subscription (Secondary CTA) */}
-                <div className="max-w-xl mx-auto text-center space-y-6 pt-12 border-t border-white/5">
-                    <h4 className="font-display text-sm text-white/60 tracking-[0.3em] uppercase">
-                        MANTENER EL VÍNCULO.
-                    </h4>
+                {/* 4. Tally Form Embed */}
+                {/* 4. Tally Form Embed */}
+                <div className="max-w-2xl mx-auto text-center space-y-6 pt-12 border-t border-white/5">
+                    <h3 className="font-display text-xl text-gold-muted tracking-[0.2em] uppercase">
+                        MANTENER EL VÍNCULO
+                    </h3>
                     <p className="font-serif italic text-gray-400">
-                        Registra tu correo para recibir información sobre los próximos ciclos y aperturas del ecosistema.
+                        Suscríbete para recibir invitaciones a futuros encuentros y novedades exclusivas del ecosistema.
                     </p>
-                    <form className="flex flex-col sm:flex-row gap-4 justify-center" onSubmit={(e) => e.preventDefault()}>
-                        <input
-                            type="email"
-                            placeholder="Tu correo"
-                            className="bg-black/30 border border-white/10 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-muted transition-colors w-full sm:w-auto flex-grow"
-                        />
-                        <button className="px-6 py-3 bg-white/5 hover:bg-gold-muted/20 border border-white/10 hover:border-gold-muted text-gold-muted text-xs font-bold uppercase tracking-widest transition-all">
-                            UNIRSE
-                        </button>
-                    </form>
+                    <iframe
+                        data-tally-src="https://tally.so/embed/J9Ak9o?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                        loading="lazy"
+                        width="100%"
+                        height="200"
+                        frameBorder="0"
+                        title="INDIO - Tickets"
+                        className="w-full bg-transparent"
+                    ></iframe>
                 </div>
 
                 {/* 5. Logos */}
