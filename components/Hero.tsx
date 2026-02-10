@@ -35,21 +35,13 @@ const Hero: React.FC<HeroProps> = ({ onRequestAccess }) => {
           <div className="flex items-center justify-center space-x-4 opacity-80 max-w-xl mx-auto">
             <span className="hidden md:block h-[1px] w-8 bg-gold-muted/50"></span>
             <p className="text-gold-muted font-serif italic text-base md:text-lg tracking-widest text-center leading-relaxed">
-              ¿ESTÁS LISTO PARA LA EXPERIENCIA?
+              ¿Estás listo para la experiencia?
             </p>
             <span className="hidden md:block h-[1px] w-8 bg-gold-muted/50"></span>
           </div>
         </div>
 
-
-
-        {/* CTA Button */}
-        <button
-          onClick={onRequestAccess}
-          className="mt-12 px-10 py-4 border animate-border-pulse bg-transparent hover:bg-white/5 text-gray-300 hover:text-gold-light transition-all duration-500 tracking-[0.25em] text-sm uppercase font-semibold"
-        >
-          Solicitar Acceso
-        </button>
+        {/* CTA Button Removed as per request */}
       </div>
 
       {/* Decorative noise texture overlay */}

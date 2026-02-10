@@ -5,15 +5,16 @@ const PricingCard: React.FC = () => {
   return (
     <div className="w-full max-w-2xl mx-auto p-4">
       {/* Card Container */}
-      <div className="relative flex flex-col items-center p-8 md:p-12 border border-gold-muted/30 bg-[#1a0505] rounded-2xl shadow-2xl overflow-hidden group hover:border-gold-muted/50 transition-colors duration-500">
+      {/* Card Container */}
+      <div className="relative flex flex-col items-center p-8 md:p-12 border border-gold-muted/30 bg-gradient-to-b from-[#2a0a0a] to-black rounded-2xl shadow-2xl overflow-hidden group hover:border-gold-muted/50 transition-colors duration-500">
 
         {/* Decorative corner glow */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-red-900/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 
-        {/* Eyebrow */}
-        <h3 className="text-gold-muted/70 text-xs md:text-sm font-bold tracking-[0.2em] uppercase mb-4 text-center">
+        {/* Eyebrow removed as per requirements */}
+        {/* <h3 className="text-gold-muted/70 text-xs md:text-sm font-bold tracking-[0.2em] uppercase mb-4 text-center">
           {PRICING_CONTENT.eyebrow}
-        </h3>
+        </h3> */}
 
         {/* Main Title */}
         <h2 className="text-3xl md:text-5xl font-sans font-bold text-gray-100 mb-6 text-center uppercase leading-tight drop-shadow-md">
@@ -21,12 +22,17 @@ const PricingCard: React.FC = () => {
         </h2>
 
         {/* New Additional Text */}
-        <div className="flex flex-col items-center space-y-2 mb-8 text-center">
-          <p className="text-lg md:text-xl font-serif text-gray-200 tracking-wide drop-shadow-md">
-            Tres encuentros. La misma magia.
+        <div className="flex flex-col items-center space-y-4 mb-8 text-center">
+          <p className="text-lg md:text-xl font-serif text-gray-200 tracking-wide drop-shadow-md px-4">
+            Tres encuentros. El mismo hilo conductor. Asegurá tu lugar en el recorrido completo.
           </p>
           <p className="text-xs md:text-sm font-light text-gold-muted/80 tracking-wider">
-            Accede al pack completo y obtén Beneficios Exclusivos
+            Accede a los tres atardeceres y obtén Beneficios Exclusivos
+          </p>
+
+          {/* Dates - Added as requested */}
+          <p className="pt-2 text-[10px] md:text-xs tracking-[0.3em] text-white/30 font-sans uppercase">
+            19.02 / 26.02 / 05.03
           </p>
         </div>
 
@@ -53,12 +59,12 @@ const PricingCard: React.FC = () => {
           </ul>
         )}
 
-        {/* Action Button */}
+        {/* Action Button - Ghost Style */}
         <button
           onClick={() => window.open("https://www.masentrada.app/events/indio-wine-sunset?referred_by=ce83a4c2-4fbe-4777-8031-338f9862ca17", "_blank")}
-          className="relative overflow-hidden px-8 py-3 bg-gold-light text-black font-bold text-xs tracking-[0.2em] uppercase shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_35px_rgba(212,175,55,0.5)] transition-all duration-300 transform hover:-translate-y-1"
+          className="relative overflow-hidden px-10 py-4 border border-gold-light text-gold-light font-bold text-xs tracking-[0.25em] uppercase transition-all duration-500 hover:bg-gold-light hover:text-black hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]"
         >
-          SOLICITAR ACCESO
+          ASEGURAR CICLO
         </button>
 
       </div>

@@ -11,7 +11,7 @@ export const ASSETS = {
 };
 
 export const PRICING_CONTENT = {
-  eyebrow: "PRÓXIMO EVENTO",
+  // eyebrow: "PRÓXIMO EVENTO", // Removed
   title: 'LA EXPERIENCIA "WINE SUNSET"',
   price: "", // Removed
   currency: "", // Removed

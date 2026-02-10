@@ -19,8 +19,8 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 px-8 py-6 flex justify-between items-center text-white transition-all duration-300 ${isScrolled
-        ? 'bg-black/20 backdrop-blur-md border-b border-white/5 py-4'
-        : 'bg-transparent mix-blend-difference'
+        ? 'py-4'
+        : ''
         }`}
     >
       <div className="flex items-center">
