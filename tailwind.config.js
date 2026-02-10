@@ -20,7 +20,7 @@ export default {
             },
             animation: {
                 'flicker': 'flicker 3s infinite alternate',
-                'scroll': 'scroll 60s linear infinite',
+                'scroll': 'scroll 30s linear infinite',
                 'border-pulse': 'border-pulse 3s infinite ease-in-out',
                 'fade-in': 'fadeIn 1s ease-out forwards',
                 'mystic-heartbeat': 'mysticHeartbeat 4s ease-in-out infinite',
@@ -36,7 +36,7 @@ export default {
                 },
                 scroll: {
                     '0%': { transform: 'translateX(0)' },
-                    '100%': { transform: 'translateX(-50%)' },
+                    '100%': { transform: 'translateX(-100%)' },
                 },
                 'border-pulse': {
                     '0%, 100%': { borderColor: 'rgba(255, 255, 255, 0.1)', boxShadow: '0 0 0 rgba(212, 175, 55, 0)' },
