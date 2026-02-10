@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #120505;
+}
+::-webkit-scrollbar-thumb {
+  background: #3a1a1a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5a2a2a;
+}
+.logo-glow {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+}
+
+body {
+  background-color: #120505;
+  color: #e5e5e5;
+  margin: 0;
+}

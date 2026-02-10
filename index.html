@@ -1,107 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Wine Sunset | El Círculo Se Cierra</title>
-    <link rel="icon" type="image/svg+xml" href="/logo-central.svg" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'wine-dark': '#120505', // Deep brownish/red black
-              'wine-accent': '#2a0a0a',
-              'gold-muted': '#a88b60',
-              'gold-light': '#d4af37',
-            },
-            fontFamily: {
-              serif: ['"Playfair Display"', 'serif'],
-              sans: ['"Montserrat"', 'sans-serif'],
-              display: ['"Cinzel"', 'serif'],
-            },
-            animation: {
-              'flicker': 'flicker 3s infinite alternate',
-              'scroll': 'scroll 40s linear infinite',
-              'border-pulse': 'border-pulse 3s infinite ease-in-out',
-              'fade-in': 'fadeIn 1s ease-out forwards',
-              'mystic-heartbeat': 'mysticHeartbeat 4s ease-in-out infinite',
-              'heartbeat': 'heartbeat 2.5s ease-in-out infinite',
-              'fadeInScale': 'fadeInScale 0.3s ease-out forwards',
-            },
-            keyframes: {
-              flicker: {
-                '0%, 100%': { opacity: '1', filter: 'brightness(1)' },
-                '50%': { opacity: '0.85', filter: 'brightness(1.2)' },
-                '52%': { opacity: '0.6', filter: 'brightness(0.9)' },
-                '54%': { opacity: '0.85', filter: 'brightness(1.2)' },
-              },
-              scroll: {
-                '0%': { transform: 'translateX(0)' },
-                '100%': { transform: 'translateX(-50%)' },
-              },
-              'border-pulse': {
-                '0%, 100%': { borderColor: 'rgba(255, 255, 255, 0.1)', boxShadow: '0 0 0 rgba(212, 175, 55, 0)' },
-                '50%': { borderColor: '#d4af37', boxShadow: '0 0 15px rgba(212, 175, 55, 0.15)' },
-              },
-              fadeIn: {
-                '0%': { opacity: '0', transform: 'translateY(10px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-              fadeInScale: {
-                '0%': { opacity: '0', transform: 'scale(0.95)' },
-                '100%': { opacity: '1', transform: 'scale(1)' },
-              },
-              mysticHeartbeat: {
-                '0%, 100%': { 
-                  borderColor: 'rgba(255, 255, 255, 0.05)', 
-                  backgroundColor: 'rgba(0, 0, 0, 0.4)', 
-                  boxShadow: '0 0 0 rgba(0,0,0,0)' 
-                },
-                '50%': { 
-                  borderColor: 'rgba(168, 139, 96, 0.3)', 
-                  backgroundColor: 'rgba(0, 0, 0, 0.6)', 
-                  boxShadow: '0 0 60px rgba(168, 139, 96, 0.15)' 
-                }
-              },
-              heartbeat: {
-                '0%, 100%': { transform: 'scale(1)' },
-                '50%': { transform: 'scale(1.08)' },
-              }
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      body {
-        background-color: #120505;
-        color: #e5e5e5;
-        /* Ensure no scroll on body initially, but handled by App component usually */
-        margin: 0;
-      }
-      /* Custom scrollbar for premium feel */
-      ::-webkit-scrollbar {
-        width: 6px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #120505;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #3a1a1a;
-        border-radius: 3px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #5a2a2a;
-      }
-      .logo-glow {
-        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
-      }
-    </style>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wine Sunset | El Círculo Se Cierra</title>
+  <link rel="icon" type="image/svg+xml" href="/logo-central.svg" />
+  <link rel="preload" href="/logo-central.png?v=3" as="image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
   <script type="importmap">
 {
   "imports": {
@@ -111,10 +21,12 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
-    <div id="root"></div>
+
+<body>
+  <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

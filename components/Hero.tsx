@@ -18,12 +18,12 @@ const Hero: React.FC<HeroProps> = ({ onRequestAccess }) => {
         {/* In production: <img src="/assets/wood-head.png" className="w-64 h-64 object-contain animate-flicker" /> */}
         <div className="relative group cursor-default">
           <img
-            src="/logo-central.svg"
+            src="/logo-central.png?v=3"
             alt="Wine Sunset Logo"
             loading="eager"
             fetchPriority="high"
             decoding="sync"
-            className="w-48 h-48 md:w-64 md:h-64 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+            className="w-32 h-auto md:w-48 object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]"
           />
         </div>
 
