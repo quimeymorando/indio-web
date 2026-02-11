@@ -20,7 +20,7 @@ export default {
             },
             animation: {
                 'flicker': 'flicker 3s infinite alternate',
-                'scroll': 'scroll 30s linear infinite',
+                'marquee-scroll': 'marquee-scroll 30s linear infinite',
                 'border-pulse': 'border-pulse 3s infinite ease-in-out',
                 'fade-in': 'fadeIn 1s ease-out forwards',
                 'mystic-heartbeat': 'mysticHeartbeat 4s ease-in-out infinite',
