@@ -18,7 +18,13 @@ const LogoMarquee: React.FC = () => {
     <div className="w-full py-12 space-y-8 overflow-hidden relative border-t border-b border-white/5 bg-black/20 backdrop-blur-sm">
 
       {/* Row 1 */}
-      <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+      <div
+        className="w-full flex flex-nowrap overflow-hidden relative"
+        style={{
+          maskImage: 'linear-gradient(to right, transparent 0, black 128px, black calc(100% - 128px), transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0, black 128px, black calc(100% - 128px), transparent 100%)'
+        }}
+      >
         <ul className="flex items-center justify-center md:justify-start [&_li]:mx-4 md:[&_li]:mx-8 [&_img]:max-w-none animate-scroll min-w-full flex-shrink-0">
           {ROW1_LOGOS.map((logo, index) => (
             <li key={`r1-1-${logo.id}-${index}`} className="flex-shrink-0">
@@ -48,7 +54,13 @@ const LogoMarquee: React.FC = () => {
       </div>
 
       {/* Row 2 */}
-      <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+      <div
+        className="w-full flex flex-nowrap overflow-hidden relative"
+        style={{
+          maskImage: 'linear-gradient(to right, transparent 0, black 128px, black calc(100% - 128px), transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0, black 128px, black calc(100% - 128px), transparent 100%)'
+        }}
+      >
         <ul className="flex items-center justify-center md:justify-start [&_li]:mx-4 md:[&_li]:mx-8 [&_img]:max-w-none animate-scroll min-w-full flex-shrink-0" style={{ animationDirection: 'reverse' }}>
           {ROW2_LOGOS.map((logo, index) => (
             <li key={`r2-1-${logo.id}-${index}`} className="flex-shrink-0">
