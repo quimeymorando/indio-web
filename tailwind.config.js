@@ -35,8 +35,8 @@ export default {
                     '54%': { opacity: '0.85', filter: 'brightness(1.2)' },
                 },
                 'marquee-scroll': {
-                    '0%': { transform: 'translateX(0)' },
-                    '100%': { transform: 'translateX(-100%)' },
+                    '0%': { transform: 'translate3d(0, 0, 0)' },
+                    '100%': { transform: 'translate3d(-100%, 0, 0)' },
                 },
                 'border-pulse': {
                     '0%, 100%': { borderColor: 'rgba(255, 255, 255, 0.1)', boxShadow: '0 0 0 rgba(212, 175, 55, 0)' },

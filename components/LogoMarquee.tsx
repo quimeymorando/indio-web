@@ -25,7 +25,10 @@ const LogoMarquee: React.FC = () => {
           WebkitMaskImage: 'linear-gradient(to right, transparent 0, black 128px, black calc(100% - 128px), transparent 100%)'
         }}
       >
-        <ul className="flex items-center justify-center md:justify-start [&_li]:mx-4 md:[&_li]:mx-8 [&_img]:max-w-none animate-marquee-scroll min-w-full flex-shrink-0">
+        <ul
+          className="flex items-center justify-center md:justify-start [&_li]:mx-4 md:[&_li]:mx-8 [&_img]:max-w-none animate-marquee-scroll w-max flex-shrink-0 will-change-transform"
+          style={{ backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
+        >
           {ROW1_LOGOS.map((logo, index) => (
             <li key={`r1-1-${logo.id}-${index}`} className="flex-shrink-0">
               <img
@@ -38,7 +41,11 @@ const LogoMarquee: React.FC = () => {
             </li>
           ))}
         </ul>
-        <ul className="flex items-center justify-center md:justify-start [&_li]:mx-4 md:[&_li]:mx-8 [&_img]:max-w-none animate-marquee-scroll min-w-full flex-shrink-0" aria-hidden="true">
+        <ul
+          className="flex items-center justify-center md:justify-start [&_li]:mx-4 md:[&_li]:mx-8 [&_img]:max-w-none animate-marquee-scroll w-max flex-shrink-0 will-change-transform"
+          aria-hidden="true"
+          style={{ backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
+        >
           {ROW1_LOGOS.map((logo, index) => (
             <li key={`r1-2-${logo.id}-${index}`} className="flex-shrink-0">
               <img
@@ -61,7 +68,10 @@ const LogoMarquee: React.FC = () => {
           WebkitMaskImage: 'linear-gradient(to right, transparent 0, black 128px, black calc(100% - 128px), transparent 100%)'
         }}
       >
-        <ul className="flex items-center justify-center md:justify-start [&_li]:mx-4 md:[&_li]:mx-8 [&_img]:max-w-none animate-marquee-scroll min-w-full flex-shrink-0" style={{ animationDirection: 'reverse' }}>
+        <ul
+          className="flex items-center justify-center md:justify-start [&_li]:mx-4 md:[&_li]:mx-8 [&_img]:max-w-none animate-marquee-scroll w-max flex-shrink-0 will-change-transform"
+          style={{ animationDirection: 'reverse', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
+        >
           {ROW2_LOGOS.map((logo, index) => (
             <li key={`r2-1-${logo.id}-${index}`} className="flex-shrink-0">
               <img
@@ -74,7 +84,11 @@ const LogoMarquee: React.FC = () => {
             </li>
           ))}
         </ul>
-        <ul className="flex items-center justify-center md:justify-start [&_li]:mx-4 md:[&_li]:mx-8 [&_img]:max-w-none animate-marquee-scroll min-w-full flex-shrink-0" aria-hidden="true" style={{ animationDirection: 'reverse' }}>
+        <ul
+          className="flex items-center justify-center md:justify-start [&_li]:mx-4 md:[&_li]:mx-8 [&_img]:max-w-none animate-marquee-scroll w-max flex-shrink-0 will-change-transform"
+          aria-hidden="true"
+          style={{ animationDirection: 'reverse', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
+        >
           {ROW2_LOGOS.map((logo, index) => (
             <li key={`r2-2-${logo.id}-${index}`} className="flex-shrink-0">
               <img
