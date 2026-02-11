@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import EventDetails from './components/EventDetails';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
   const handleRequestAccess = () => {
@@ -20,9 +21,7 @@ const App: React.FC = () => {
         <EventDetails id="details" />
       </main>
 
-      <footer className="w-full py-8 text-center text-white/20 text-xs tracking-widest uppercase bg-black">
-        <p>&copy; {new Date().getFullYear()} Grupo Moretto. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };
