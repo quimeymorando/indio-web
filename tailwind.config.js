@@ -34,7 +34,7 @@ export default {
                     '52%': { opacity: '0.6', filter: 'brightness(0.9)' },
                     '54%': { opacity: '0.85', filter: 'brightness(1.2)' },
                 },
-                scroll: {
+                'marquee-scroll': {
                     '0%': { transform: 'translateX(0)' },
                     '100%': { transform: 'translateX(-100%)' },
                 },
