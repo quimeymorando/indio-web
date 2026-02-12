@@ -143,14 +143,16 @@ const EventDetails: React.FC<EventDetailsProps> = ({ id }) => {
                 </div>
 
                 {/* 5. Logos */}
-                <div className="pt-20 opacity-60 hover:opacity-100 transition-opacity duration-700">
+                <div className="pt-20">
                     <div className="text-center mb-10">
-                        <h3 className="text-xs tracking-[0.4em] text-white/30 uppercase font-serif">
+                        <h3 className="text-sm tracking-[0.4em] text-white uppercase font-serif font-bold drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]">
                             Grupo Moretto
                         </h3>
                         <div className="w-8 h-[1px] bg-white/10 mx-auto mt-4"></div>
                     </div>
-                    <LogoMarquee />
+                    <div className="opacity-60 hover:opacity-100 transition-opacity duration-700">
+                        <LogoMarquee />
+                    </div>
                 </div>
 
             </div>

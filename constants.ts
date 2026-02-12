@@ -22,7 +22,7 @@ export const PRICING_CONTENT = {
 // Placeholder logos for "Grupo Moretto". 
 // In a real scenario, replace these with the transparent PNGs of the partner brands.
 export const BRAND_LOGOS = [
-  { id: 1, name: "Grupo Moretto", url: "/1.png" },
+
   { id: 2, name: "Brand 2", url: "/2.png" },
   { id: 3, name: "Brand 3", url: "/3.png" },
   { id: 4, name: "Brand 4", url: "/4.png" },

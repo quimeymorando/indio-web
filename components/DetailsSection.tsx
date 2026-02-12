@@ -61,7 +61,7 @@ const DetailsSection: React.FC<DetailsSectionProps> = ({ id }) => {
       {/* 3. Logos Carousel */}
       <div className="relative z-10 w-full">
         <div className="text-center mb-10">
-          <h3 className="text-sm md:text-base tracking-[0.4em] text-white/40 uppercase font-serif">
+          <h3 className="text-sm md:text-xl tracking-[0.4em] text-white uppercase font-serif font-bold drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]">
             Grupo Moretto
           </h3>
           <div className="w-12 h-[1px] bg-white/10 mx-auto mt-4"></div>

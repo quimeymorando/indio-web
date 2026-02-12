@@ -3,10 +3,10 @@ import { BRAND_LOGOS } from '../constants';
 
 const LogoMarquee: React.FC = () => {
   // Split logos into two groups
-  // Row 1: First 4 logos
-  const ROW1_LOGOS_SOURCE = BRAND_LOGOS.slice(0, 4);
+  // Row 1: First 3 logos
+  const ROW1_LOGOS_SOURCE = BRAND_LOGOS.slice(0, 3);
   // Row 2: Remaining 3 logos
-  const ROW2_LOGOS_SOURCE = BRAND_LOGOS.slice(4);
+  const ROW2_LOGOS_SOURCE = BRAND_LOGOS.slice(3);
 
   // Duplicate to ensure we cover screen width (assuming ~150px per item including margin)
   // Target ~20-25 items per row for > 3000px width coverage
