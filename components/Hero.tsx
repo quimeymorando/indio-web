@@ -35,7 +35,7 @@ const Hero: React.FC<HeroProps> = ({ onRequestAccess }) => {
           <div className="flex items-center justify-center space-x-4 opacity-80 max-w-xl mx-auto">
             <span className="hidden md:block h-[1px] w-8 bg-gold-muted/50"></span>
             <p className="text-gold-muted font-serif italic text-base md:text-lg tracking-widest text-center leading-relaxed">
-              ¿Estás listo o lista para la experiencia?
+              ¿Todo listo para comenzar la experiencia?
             </p>
             <span className="hidden md:block h-[1px] w-8 bg-gold-muted/50"></span>
           </div>
